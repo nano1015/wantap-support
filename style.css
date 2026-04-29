@@ -1,0 +1,432 @@
+/* ===================================
+   わんタップ サポートサイト
+   なのちゃん（シルバーダップル）テーマ
+   =================================== */
+
+:root {
+  --color-bg: #FAF7F2;
+  --color-bg-card: #FFFFFF;
+  --color-text: #2C2A28;
+  --color-text-soft: #6B6560;
+  --color-accent: #C8956D;        /* タン（ダックスのタン色） */
+  --color-accent-deep: #8B6845;
+  --color-silver: #B8B0A8;         /* シルバーダップル */
+  --color-silver-light: #E8E2DA;
+  --color-cream: #F5EDE0;
+  --color-warm-line: #E5DDD0;
+  --shadow-soft: 0 2px 12px rgba(139, 104, 69, 0.06);
+  --shadow-card: 0 4px 20px rgba(139, 104, 69, 0.08);
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --font-display: "DM Serif Display", "Zen Maru Gothic", serif;
+  --font-body: "Zen Maru Gothic", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.8;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(200, 149, 109, 0.04) 0%, transparent 35%),
+    radial-gradient(circle at 85% 80%, rgba(184, 176, 168, 0.05) 0%, transparent 40%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===========================
+   ヒーロー
+   =========================== */
+.hero {
+  padding: 72px 0 56px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-bg) 100%);
+  border-bottom: 1px solid var(--color-warm-line);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(200, 149, 109, 0.08), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-sub {
+  padding: 56px 0 40px;
+}
+
+.paw-mark {
+  font-size: 40px;
+  margin-bottom: 16px;
+  display: inline-block;
+  animation: gentleBounce 3s ease-in-out infinite;
+}
+
+@keyframes gentleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.app-name {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 52px);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 15px;
+  color: var(--color-accent-deep);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+  text-transform: none;
+}
+
+.lead {
+  font-size: 14px;
+  color: var(--color-text-soft);
+}
+
+.updated {
+  font-size: 13px;
+  color: var(--color-text-soft);
+  font-style: italic;
+}
+
+/* ===========================
+   コンテンツ
+   =========================== */
+.content {
+  padding: 56px 24px 64px;
+}
+
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-warm-line);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(139, 104, 69, 0.1);
+}
+
+.card.intro {
+  background: var(--color-cream);
+  border-color: var(--color-accent);
+  border-left: 4px solid var(--color-accent);
+}
+
+.card h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font-weight: 400;
+}
+
+.card h2 .num {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--color-accent);
+  background: var(--color-cream);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.card p {
+  color: var(--color-text);
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card strong {
+  color: var(--color-accent-deep);
+  font-weight: 700;
+}
+
+/* ===========================
+   機能リスト
+   =========================== */
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 12px 0 12px 32px;
+  border-bottom: 1px dashed var(--color-warm-line);
+  position: relative;
+  color: var(--color-text);
+  font-size: 15px;
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
+}
+
+.feature-list li::before {
+  content: "🐾";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ===========================
+   ステップ
+   =========================== */
+.step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--color-warm-line);
+}
+
+.step:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.step:first-of-type {
+  padding-top: 4px;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--color-accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(200, 149, 109, 0.3);
+}
+
+.step > div {
+  flex: 1;
+}
+
+.step p {
+  font-size: 14px;
+  color: var(--color-text-soft);
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* ===========================
+   FAQ
+   =========================== */
+.faq {
+  margin-bottom: 12px;
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-warm-line);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faq:hover {
+  border-color: var(--color-accent);
+}
+
+.faq:last-child {
+  margin-bottom: 0;
+}
+
+.faq summary {
+  padding: 16px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--color-text);
+  list-style: none;
+  position: relative;
+  padding-right: 50px;
+  user-select: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: var(--color-accent);
+  transition: transform 0.3s ease;
+  font-weight: 300;
+}
+
+.faq[open] summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq[open] summary {
+  border-bottom: 1px solid var(--color-warm-line);
+}
+
+.faq p {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: var(--color-text-soft);
+  line-height: 1.8;
+}
+
+.faq a {
+  color: var(--color-accent-deep);
+  font-weight: 500;
+}
+
+/* ===========================
+   コンタクト
+   =========================== */
+.contact {
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-cream) 0%, #FFFFFF 100%);
+}
+
+.email-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 14px 28px;
+  background: var(--color-accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(200, 149, 109, 0.3);
+  letter-spacing: 0.02em;
+}
+
+.email-btn:hover {
+  background: var(--color-accent-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 149, 109, 0.4);
+}
+
+/* ===========================
+   フッター
+   =========================== */
+footer {
+  border-top: 1px solid var(--color-warm-line);
+  padding: 32px 0;
+  margin-top: 24px;
+  text-align: center;
+  background: var(--color-bg-card);
+}
+
+.footer-links {
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  color: var(--color-text-soft);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-accent-deep);
+}
+
+.divider {
+  margin: 0 14px;
+  color: var(--color-silver);
+}
+
+.copy {
+  font-size: 12px;
+  color: var(--color-silver);
+  letter-spacing: 0.05em;
+}
+
+/* ===========================
+   レスポンシブ
+   =========================== */
+@media (max-width: 600px) {
+  .hero {
+    padding: 56px 0 40px;
+  }
+
+  .content {
+    padding: 40px 20px 48px;
+  }
+
+  .card {
+    padding: 28px 22px;
+    border-radius: var(--radius-md);
+  }
+
+  .card h2 {
+    font-size: 19px;
+    flex-wrap: wrap;
+  }
+
+  .step {
+    gap: 14px;
+  }
+}
