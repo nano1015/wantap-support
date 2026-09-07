@@ -1,128 +1,109 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>わんタップ サポート</title>
-<meta name="description" content="用途別アプリランチャー「わんタップ」のサポートページ。ご利用ガイド・FAQ・お問い合わせ。">
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>わんタップ - サポート</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', sans-serif;
+      background: #FAF8F5;
+      color: #2D2D2D;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .hero {
+      text-align: center;
+      padding: 40px 0;
+    }
+    .hero-emoji {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: #7A7A7A;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #E8E4E0;
+    }
+    p, li {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    a {
+      color: #725744;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 13px;
+      color: #7A7A7A;
+    }
+    .nav {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+  </style>
 </head>
 <body>
-
-<header class="hero">
-  <div class="container">
-    <div class="paw-mark">🐾</div>
-    <h1 class="app-name">わんタップ</h1>
-    <p class="tagline">用途別アプリランチャー</p>
-    <p class="lead">なのちゃんとアプリをワンタップで整理</p>
-  </div>
-</header>
-
-<main class="container content">
-
-  <section class="card">
-    <h2><span class="num">01</span>わんタップとは</h2>
-    <p>iPhoneのアプリを「仕事」「SNS」「エンタメ」など<strong>用途別カテゴリ</strong>で整理して、<strong>ワンタップ</strong>で起動できるランチャーアプリです。ホーム画面のアプリが増えすぎて困っている方のために、シルバーダップルのミニチュアダックス「なのちゃん」がお手伝いします。</p>
-  </section>
-
-  <section class="card">
-    <h2><span class="num">02</span>主な機能</h2>
-    <ul class="feature-list">
-      <li>用途別カテゴリでアプリを整理</li>
-      <li>カテゴリ・アプリの追加／編集／並び替え</li>
-      <li>ワンタップでアプリ起動</li>
-      <li>なのちゃんの応援メッセージ</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2><span class="num">03</span>使い方</h2>
-
-    <div class="step">
-      <span class="step-num">1</span>
-      <div>
-        <h3>カテゴリを選ぶ</h3>
-        <p>ホーム画面上部のタブから、起動したいアプリのカテゴリ（仕事／SNS／エンタメなど）を選択します。</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <span class="step-num">2</span>
-      <div>
-        <h3>アプリを追加する</h3>
-        <p>「+」ボタンから、登録したいアプリを選びます。プリセット一覧から選択するか、URLスキームを手動入力で追加できます。</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <span class="step-num">3</span>
-      <div>
-        <h3>アプリを起動する</h3>
-        <p>登録したアイコンをタップすると、対象のアプリが起動します。</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <span class="step-num">4</span>
-      <div>
-        <h3>並び替え</h3>
-        <p>アイコンを長押しでドラッグ&ドロップによる並び替えが可能です。</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2><span class="num">04</span>よくある質問</h2>
-
-    <details class="faq">
-      <summary>アプリをタップしても起動しません</summary>
-      <p>対象アプリの「URLスキーム」が変更された可能性があります。アプリ提供元の最新仕様をご確認ください。また、対象アプリが端末にインストールされていない場合も起動できません。</p>
-    </details>
-
-    <details class="faq">
-      <summary>自分の使っているアプリがプリセットにありません</summary>
-      <p>「手動入力」から、アプリ名とURLスキームを入力して追加できます。URLスキームは各アプリの公式ドキュメントをご確認ください。</p>
-    </details>
-
-    <details class="faq">
-      <summary>データは外部に送信されますか？</summary>
-      <p>いいえ。すべてのデータは端末内にのみ保存されます。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
-    </details>
-
-    <details class="faq">
-      <summary>ウィジェット対応の予定はありますか？</summary>
-      <p>今後のアップデートで対応を検討しています。ご要望はぜひお問い合わせください。</p>
-    </details>
-
-    <details class="faq">
-      <summary>機種変更したらデータはどうなりますか？</summary>
-      <p>現在は端末内保存のみのため、機種変更時にはデータが移行されません。iCloud同期は今後のアップデートで対応予定です。</p>
-    </details>
-  </section>
-
-  <section class="card contact">
-    <h2><span class="num">05</span>お問い合わせ</h2>
-    <p>ご質問・ご要望は以下までお気軽にどうぞ。</p>
-    <a href="mailto:bindexplanner.support@gmail.com" class="email-btn">
-      bindexplanner.support@gmail.com
-    </a>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <nav class="footer-links">
-      <a href="index.html">サポート</a>
-      <span class="divider">·</span>
-      <a href="privacy.html">プライバシーポリシー</a>
-    </nav>
-    <p class="copy">© 2026 Nano. All rights reserved.</p>
-  </div>
-</footer>
-
+  <main class="container">
+    <div class="hero"><div class="hero-emoji" aria-hidden="true">🐕</div><h1>わんタップ サポート</h1><p class="subtitle">用途別アプリランチャー</p></div>
+    <section class="card"><h2>配信中の1.6をご利用の方へ</h2>
+      <p>わんタップは、よく使うアプリをカテゴリに整理し、アプリ内やホーム画面のウィジェットから起動できるiPhone向けアプリです。無料で、ログインは不要です。</p>
+      <ul><li>カテゴリ・アプリの追加、編集、並び替え</li><li>URLスキームやショートカットによる起動</li><li>ホーム画面ウィジェットと「なのちゃん」の表示設定</li><li>カテゴリ・アプリ・設定のJSONバックアップと復元</li></ul>
+      <p>以下の基本操作は1.6でも利用できます。1.7固有の変更は「公開準備中」の欄をご覧ください。</p>
+    </section>
+    <section class="card"><h2>基本の使い方</h2>
+      <ol><li>ホームでカテゴリを選び、「＋」からプリセットまたは手動入力でアプリを登録します。</li><li>登録したアイコンをタップして起動します。アイコンの長押しで並び替えできます。</li><li>iPhoneのホーム画面を長押しし、「編集」からウィジェットを追加して「わんタップ」を探します。</li><li>追加したウィジェットを長押しして編集し、表示するカテゴリなどを指定します。アプリ内のウィジェット画面にも追加案内があります。</li></ol>
+      <p>アプリはiOS 17以降に対応します。ガラスの外観はiOS 26以降の表示機能を利用するため、OS・端末・ホーム画面の外観設定によって見え方が異なります。</p>
+    </section>
+    <section class="card"><h2>1.7向け・公開準備中</h2>
+      <p>以下は次版1.7の案内です。配信中1.6にはまだ表示されません。</p>
+      <ul><li>「生活セットから追加」：買い物・通勤・仕事の候補から1〜4個を選び、入替・並び替え・お試しをして新しいカテゴリに保存します。</li><li>「目的から追加」：帰宅ルート、買い物メモ、よく使うショートカットを登録します。帰宅ルートは指定した目的地・移動手段でマップを開きます。</li><li>買い物メモは、Appleのショートカットで指定したメモを開く操作を先に作成し、その名前を正確に登録します。支払いの自動実行や、メモの自動作成は行いません。</li><li>ウィジェットを「アプリランチャー」「カテゴリアプリ」それぞれのガラス／透明の4種類へ整理します。更新後に古いウィジェットが表示されない場合は、新しい種類を追加して対象カテゴリと配置を指定してください。古いウィジェットの削除で、アプリ内の登録データは削除されません。</li><li>「起動未確認」は未インストールの断定ではありません。「候補すべて」から登録し、お試しできます。</li></ul>
+    </section>
+    <section class="card"><h2>バックアップ・機種変更</h2>
+      <p>「設定」→「バックアップ / 復元」→「バックアップを共有」でJSONを保管します。移行先では同じ画面へJSON全文を貼り付け、「復元する」を選びます。復元すると、現在のカテゴリ・アプリ・設定が置き換わるため、先に現在の内容も保管してください。</p>
+      <p>自動クラウド同期ではありません。起動先アプリやショートカット自体は別途用意し、写真・壁紙は必要に応じて移行先で選び直してください。JSONには登録URLなどが含まれるため、共有先はご自身で選んでください。</p>
+    </section>
+    <section class="card"><h2>よくある質問</h2>
+      <h3>アプリやショートカットが起動しません</h3><p>対象アプリの導入状況、URLスキームの変更、ショートカット名を確認してください。起動確認ができないアプリもあります。フォールバックURLを登録している場合はWebページが開くことがあります。ショートカットアプリが開くことと処理が完了することは異なるため、実行結果を確認してください。</p>
+      <h3>アイコンやデータは外部に送信されますか？</h3><p>登録内容は基本的に端末内へ保存します。プリセットの起動確認済み候補の表示、実アイコンの追加・更新・検索ではAppleからアイコンを取得します。1.7の生活セットで候補を選ぶときにも自動取得します。起動操作ではリンクの内容をMapsやShortcutsなどへ渡します。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+      <h3>なのちゃんを非表示にしたい</h3><p>設定画面から「なのちゃんを表示」をOFFにできます。</p>
+    </section>
+    <section class="card"><h2>お問い合わせ</h2><p>不具合の際は、アプリのバージョン、iOSのバージョン、操作手順をお知らせください。住所やバックアップ全文など、個人情報の送付は不要です。</p><p><a href="mailto:daxlauncher.support@gmail.com">daxlauncher.support@gmail.com</a></p><p>以前の「わんタップ Glass」に関するお問い合わせも同じ窓口で受け付けます。</p></section>
+    <nav class="nav"><a href="privacy.html">プライバシーポリシー</a></nav><footer class="footer"><p>更新日: 2026年9月7日</p><p>&copy; 2026 Nano. All rights reserved.</p></footer>
+  </main>
 </body>
 </html>
